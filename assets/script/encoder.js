@@ -23,11 +23,11 @@ async function encode() {
     let sps = (await sha256((await sha256((await sha256(sha)))))).split(/(.{8})/).filter(o=>o).map(o=>o.split(/(.{2})/).filter(o=>o).map(x=>specials[(x.charCodeAt(0)+x.charCodeAt(1))%specials.length]));
     let grid = [nbs,als,sps];
 
-    re.innerHTML = sha.split(/(.{4})/).filter(o=>o).map(x=>grid[(((x.charCodeAt(2)+x.charCodeAt(3))%12)/4) >> 0][(x.charCodeAt(0)+x.charCodeAt(1)) % 8][((x.charCodeAt(2)+x.charCodeAt(3))%12)%4]).join('');
+    re.textContent = sha.split(/(.{4})/).filter(o=>o).map(x=>grid[(((x.charCodeAt(2)+x.charCodeAt(3))%12)/4) >> 0][(x.charCodeAt(0)+x.charCodeAt(1)) % 8][((x.charCodeAt(2)+x.charCodeAt(3))%12)%4]).join('');
 }
 
 
 
 dm.addEventListener('change', encode);
 ky.addEventListener('change', encode);
-recpy.addEventListener('click', () => navigator.clipboard.writeText(re.innerHTML));
+recpy.addEventListener('click', () => navigator.clipboard.writeText(re.textContent));
