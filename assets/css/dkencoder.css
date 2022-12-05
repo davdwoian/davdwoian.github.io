@@ -1,17 +1,23 @@
 body {
-    background: rgba(128, 128, 128, 0.124);
+    background-image: url("/assets/image/background.png");
+    background-size: contain;
 }
 input {
-    background-color: rgba(255, 250, 250, 0.796);
+    background: #d4dbd5;
 
     font-size: 1.7vh;
     font-family: 'Candara';
+
+    opacity: 0.75;
 }
 legend {
     font-family: 'Goudy Old Style';
 }
 textarea {
+    background: #d4dbd5;
+
     resize: none;
+    opacity: 0.75;
 }
 
 #wrap {
@@ -20,13 +26,14 @@ textarea {
 
     width: 80vw;
     height: 75vh;
+    min-width: 400px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px rgba(246, 210, 64, 0.524) solid;
+    border: 2px rgba(55, 54, 54, 0.392) solid;
     border-radius: 12px;
     
-    background: #99b0ada7;
+    background: #666a589a;
 }
 .half {
     position: relative;
@@ -61,10 +68,10 @@ textarea {
 
 .banner-container {
     position: relative;
-    top: 5px;
+    top: 7.5px;
     
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -81,8 +88,10 @@ textarea {
     box-sizing: border-box;
 
     margin: 0px 5px;
-    border: 2px rgba(73, 55, 55, 0.472) dashed;
+    border: 2px rgb(171, 178, 146) dashed;
     border-radius: 4px;
+
+    color: rgb(211, 216, 203);
 }
 .textinput-middle {
     position: relative;
